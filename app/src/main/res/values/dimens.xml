@@ -1,0 +1,23 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="elevation">4dp</dimen>
+    <dimen name="padding_small">6dp</dimen>
+    <dimen name="padding_menu">18dp</dimen>
+    <dimen name="minus_padding_small">-12dp</dimen>
+    <dimen name="padding">14dp</dimen>
+    <dimen name="small_round">8dp</dimen>
+    <dimen name="list_item_spacing">16dp</dimen>
+    <dimen name="list_item_spacing_half">8dp</dimen>
+    <dimen name="marginTop32">32dp</dimen>
+    <dimen name="max_lenght_default">100</dimen>
+    <dimen name="size_title">18sp</dimen>
+    <dimen name="size_subtitle">14sp</dimen>
+    <dimen name="size_content">12sp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="table_view_cell_height">28dp</dimen>
+    <dimen name="table_view_row_header_width">28dp</dimen>
+    <dimen name="table_view_default_text_size">11sp</dimen>
+</resources>

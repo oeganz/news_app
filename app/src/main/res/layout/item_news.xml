@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="VM"
+            type="com.ganz.newsapp.viewmodel.NewsVM" />
+        <variable
+            name="model"
+            type="com.ganz.newsapp.repository.remote.response.Article" />
+    </data>
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{()->VM.setOnclickArticle(model)}">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:minHeight="140dp"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/vImgView"
+                app:imageUrl="@{model.urlToImage}"
+                />
+            <LinearLayout
+                android:layout_marginStart="@dimen/padding_small"
+                android:padding="@dimen/padding"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/vImgView"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textview.MaterialTextView
+                    android:text="@{model.title}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Body2"
+                    tools:text="Title"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:text="@{model.description}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    tools:text="Title"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_gravity="end"
+                    android:text="@{model.source.name+` | `+model.getTime()}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    tools:text="Title"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>
